@@ -9,8 +9,7 @@ export async function checkLoginAndGetname(): Promise <string | undefined> {
         else{
             return 'Someone'
         } 
-
-        
+       
 
     } catch (error) {
         console.log('User is not logged in.')
