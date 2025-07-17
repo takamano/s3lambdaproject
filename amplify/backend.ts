@@ -5,6 +5,7 @@ import { Backend } from 'aws-cdk-lib/aws-appmesh';
 import { EventType } from 'aws-cdk-lib/aws-s3';
 import { LambdaDestination } from 'aws-cdk-lib/aws-s3-notifications';
 import { auth } from './auth/resource';
+import { data } from './data/resource';
 
 
 /**
@@ -13,7 +14,8 @@ import { auth } from './auth/resource';
 const backend = defineBackend  ({
   imageStorage,
   generateThumb,
-  auth
+  auth,
+  data
 });
 
 backend.imageStorage.resources.bucket.addEventNotification(
