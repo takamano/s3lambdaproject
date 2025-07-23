@@ -1,5 +1,5 @@
 import { StorageImage } from "@aws-amplify/ui-react-storage";
-import { Place } from "./Places";
+import type { Place } from './Places'
 import { NavLink } from "react-router";
 
 
@@ -31,4 +31,4 @@ export default function PlaceComponent(props: {
 
 
 
-}
+} 
