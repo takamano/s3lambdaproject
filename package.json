@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@aws-amplify/ui-react": "^6.11.2",
+    "@aws-amplify/ui-react-storage": "^3.11.0",
     "@types/aws-lambda": "^8.10.150",
     "aws-amplify": "^6.15.3",
     "jimp": "^1.6.0",
