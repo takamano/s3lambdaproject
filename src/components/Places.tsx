@@ -10,6 +10,8 @@ function Places() {
 
     const client = generateClient<Schema>();
     const [places, setPlaces] = useState<Place[]>([])
+    console.log("Model Checks:")
+    console.log(client.models)
 
     useEffect(() => {
         const handleData = async () => {
