@@ -1,10 +1,11 @@
-import { SyntheticEvent, useEffect, useState, type JSX } from "react";
+import { useEffect, useState, type JSX } from "react";
+import type { SyntheticEvent } from 'react';
 import { checkLoginAndGetName } from "../utils/AuthUtils";
 import { NavLink } from "react-router";
 import { generateClient } from "aws-amplify/data";
 import type { Schema } from "../../amplify/data/resource";
 import { uploadData } from "aws-amplify/storage";
-import PlaceDetails from './PlacesDetails';
+
 
 export type CustomEvent = {
     target: HTMLInputElement
@@ -35,6 +36,12 @@ function CreatePlace() {
 
         async function handleSubmit(event: SyntheticEvent) {
         event.preventDefault();
+
+            // clientがnullでないことを確認
+        if (!client) {
+            console.error('Client not initialized');
+            return;
+        }
 
         if(placeName && placeDescription) {
             let placePhotosUrls: string[] = [];

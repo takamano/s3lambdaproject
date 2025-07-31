@@ -49,6 +49,7 @@ function PlaceDetails () {
                 }
             }
         })
+        return () => sub.unsubscribe();
     }, [])
 
     function renderPhotos () {
